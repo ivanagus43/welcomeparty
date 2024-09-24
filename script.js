@@ -7,14 +7,16 @@ document.getElementById("checkAnswers").addEventListener("click", function() {
     const textareas = document.querySelectorAll("textarea.answer");
     const results = document.querySelectorAll(".result");
 
+    // Reset hasil sebelumnya
+    results.forEach(resultDiv => {
+        resultDiv.textContent = ""; // Hapus teks hasil
+        resultDiv.className = ""; // Hapus kelas
+    });
+
     // Cek jawaban baru
     textareas.forEach((textarea, index) => {
         const userAnswer = textarea.value.trim();
         const resultDiv = results[index];
-
-        // Reset hasil untuk setiap jawaban
-        resultDiv.textContent = ""; // Hapus teks hasil sebelumnya
-        resultDiv.className = ""; // Hapus kelas sebelumnya
 
         if (userAnswer === "") {
             resultDiv.textContent = "❌"; // Tampilkan silang jika kosong
