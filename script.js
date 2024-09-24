@@ -1,7 +1,6 @@
 document.getElementById("checkAnswers").addEventListener("click", function() {
     const correctAnswers = [
-        "A", "B", "C", "D", "E",
-        "F", "G", "H", "I", "J"
+        "A", "B", "C", "D", "E"
     ];
 
     const textareas = document.querySelectorAll("textarea.answer");
@@ -15,7 +14,7 @@ document.getElementById("checkAnswers").addEventListener("click", function() {
 
     // Cek jawaban baru
     textareas.forEach((textarea, index) => {
-        const userAnswer = textarea.value.trim();
+        const userAnswer = textarea.value.trim().toUpperCase(); // Tambahkan toUpperCase() untuk konsistensi
         const resultDiv = results[index];
 
         if (userAnswer === "") {
