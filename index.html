@@ -10,7 +10,7 @@
             display: grid;
             grid-template-columns: repeat(5, 30px); /* Set lebar kolom input */
             gap: 10px 40px; /* Jarak antar kolom dan antar baris */
-            margin-bottom: 30px; /* Jarak antara baris input */
+            margin-bottom: 10px; /* Jarak antara baris input */
         }
         input[type="text"] {
             width: 100%; /* Lebar input 100% dari kolom */
@@ -23,7 +23,11 @@
             font-size: 16px;
             cursor: pointer;
         }
-        .result { margin-top: 5px; }
+        .result {
+            margin-top: 0px;
+            text-align: center; /* Center the content */
+            height: 20px; /* Set a height for consistent spacing */
+        }
         .correct { color: green; }
         .incorrect { color: red; }
     </style>
