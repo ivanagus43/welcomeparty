@@ -7,17 +7,8 @@ th, td {
     padding: 10px;
     text-align: center;
 }
-.correct {
-    background-color: lightgreen;
-}
-.incorrect {
-    background-color: lightcoral;
-}
-.column-correct {
-    background-color: lightgreen;
-}
-.column-incorrect {
-    background-color: lightcoral;
+.result {
+    font-size: 20px; /* Ukuran font untuk tanda centang/silang */
 }
 button {
     margin-top: 20px;
