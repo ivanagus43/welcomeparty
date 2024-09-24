@@ -7,10 +7,10 @@ const correctAnswers = [
 ];
 
 document.querySelector('#checkAnswers').addEventListener('click', () => {
-    // Reset semua kolom sebelum memeriksa jawaban
-    const allColumns = document.querySelectorAll('td');
-    allColumns.forEach(cell => {
-        cell.classList.remove('column-correct', 'column-incorrect');
+    // Reset hasil sebelumnya
+    const results = document.querySelectorAll('.result');
+    results.forEach(result => {
+        result.textContent = ''; // Menghapus tanda centang/silang sebelumnya
     });
 
     document.querySelectorAll('.answer').forEach((input, index) => {
@@ -19,17 +19,13 @@ document.querySelector('#checkAnswers').addEventListener('click', () => {
         const userAnswer = input.value.trim().toUpperCase();
         const correctAnswer = correctAnswers[rowIndex][colIndex];
 
-        // Menentukan warna kolom berdasarkan jawaban
-        const columnCells = document.querySelectorAll(`tr td:nth-child(${colIndex + 1})`);
+        // Menentukan hasil berdasarkan jawaban
+        const resultCell = document.querySelector(`tr:nth-child(${Math.floor(index / 5) + 2}) .result`);
         
         if (userAnswer === correctAnswer) {
-            columnCells.forEach(cell => {
-                cell.classList.add('column-correct');
-            });
+            resultCell.textContent += '✔️ '; // Tanda centang jika benar
         } else if (userAnswer !== '') {
-            columnCells.forEach(cell => {
-                cell.classList.add('column-incorrect');
-            });
+            resultCell.textContent += '❌ '; // Tanda silang jika salah
         }
     });
 });
