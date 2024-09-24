@@ -15,8 +15,8 @@ th, td {
     margin-top: 2px; /* Spasi antara input dan hasil */
 }
 textarea.answer {
-    width: 100%; /* Mengisi penuh kolom */
-    height: 100%; /* Mengisi penuh kolom */
+    width: 50px; /* Mengatur lebar textarea */
+    height: 50px; /* Mengatur tinggi textarea */
     font-size: 16px; /* Ukuran font untuk textarea */
     padding: 0; /* Menghapus padding untuk ukuran yang tepat */
     margin: 0; /* Menghapus margin untuk ukuran yang tepat */
