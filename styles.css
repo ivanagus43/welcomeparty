@@ -6,8 +6,8 @@ table {
 th, td {
     border: 1px solid #000;
     padding: 0; /* Menghapus padding */
-    width: 20px; /* Lebar kolom */
-    height: 20px; /* Tinggi kolom */
+    width: 50px; /* Lebar kolom */
+    height: 50px; /* Tinggi kolom */
     text-align: center;
 }
 .result {
@@ -18,6 +18,9 @@ input.answer {
     width: 100%; /* Mengisi penuh kolom */
     height: 100%; /* Mengisi penuh kolom */
     box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
+    font-size: 12px; /* Ukuran font untuk input */
+    padding: 0; /* Menghapus padding untuk ukuran yang tepat */
+    margin: 0; /* Menghapus margin untuk ukuran yang tepat */
 }
 button {
     margin-top: 20px;
