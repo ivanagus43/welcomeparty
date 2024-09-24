@@ -6,8 +6,12 @@
     <title>Quiz Sederhana</title>
     <style>
         body { font-family: Arial, sans-serif; }
+        .input-container {
+            display: flex; /* Mengatur input agar berjejer ke samping */
+            gap: 10px; /* Jarak antar input */
+        }
         input[type="text"] {
-            width: 50px; /* Atur lebar input di sini */
+            width: 100px; /* Atur lebar input */
             padding: 10px;
             font-size: 16px;
         }
@@ -17,21 +21,30 @@
 <body>
 
 <h1>Masukkan Jawaban Anda</h1>
-<input type="text" id="userAnswer" placeholder="Masukkan jawaban Anda">
-<button onclick="checkAnswer()">Kirim</button>
+<div class="input-container">
+    <input type="text" id="userAnswer1" placeholder="Jawaban 1">
+    <input type="text" id="userAnswer2" placeholder="Jawaban 2">
+    <input type="text" id="userAnswer3" placeholder="Jawaban 3">
+    <input type="text" id="userAnswer4" placeholder="Jawaban 4">
+    <input type="text" id="userAnswer5" placeholder="Jawaban 5">
+</div>
+<button onclick="checkAnswers()">Kirim</button>
 
 <div class="result" id="result"></div>
 
 <script>
-    function checkAnswer() {
-        const correctAnswer = "Soekarno";
-        const userAnswer = document.getElementById("userAnswer").value;
+    function checkAnswers() {
+        const correctAnswers = ["Soekarno", "Soekarno", "Soekarno", "Soekarno", "Soekarno"];
+        let resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = ""; // Reset hasil
 
-        const resultDiv = document.getElementById("result");
-        if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
-            resultDiv.innerHTML = "<p style='color: green;'>Jawaban Benar!</p>";
-        } else {
-            resultDiv.innerHTML = "<p style='color: red;'>Jawaban Salah. Coba lagi!</p>";
+        for (let i = 1; i <= 5; i++) {
+            const userAnswer = document.getElementById(`userAnswer${i}`).value;
+            if (userAnswer.trim().toLowerCase() === correctAnswers[i - 1].toLowerCase()) {
+                resultDiv.innerHTML += `<p style='color: green;'>Jawaban ${i} Benar!</p>`;
+            } else {
+                resultDiv.innerHTML += `<p style='color: red;'>Jawaban ${i} Salah. Coba lagi!</p>`;
+            }
         }
     }
 </script>
