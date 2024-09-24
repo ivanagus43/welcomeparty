@@ -8,15 +8,15 @@
         body { font-family: Arial, sans-serif; }
         .input-container {
             display: grid;
-            grid-template-columns: repeat(5, 30px); /* Set lebar kolom input */
-            gap: 10px 40px; /* Jarak antar kolom dan antar baris */
+            grid-template-columns: repeat(5, 40px); /* Set lebar kolom input */
+            gap: 10px 20px; /* Jarak antar kolom dan antar baris */
             margin-bottom: 10px; /* Jarak antara baris input */
         }
         input[type="text"] {
             width: 100%; /* Lebar input 100% dari kolom */
-            padding: 10px;
+            padding: 5px;
             font-size: 16px;
-            margin-bottom: 10px; /* Jarak antar baris input */
+            margin-bottom: 5px; /* Jarak antar baris input */
         }
         button {
             padding: 10px 20px;
@@ -24,7 +24,6 @@
             cursor: pointer;
         }
         .result {
-            margin-top: 0px;
             text-align: center; /* Center the content */
             height: 20px; /* Set a height for consistent spacing */
         }
@@ -141,6 +140,13 @@
         <input type="text" id="userAnswer25" placeholder="Y">
         <div class="result" id="result25"></div>
     </div>
+
+    <!-- New input for Jumlah -->
+    <div>
+        <label for="jumlah">Jumlah:</label>
+        <input type="text" id="jumlah" placeholder="Jumlah">
+        <div class="result" id="resultJumlah"></div> <!-- Result for Jumlah -->
+    </div>
 </div>
 <button onclick="checkAnswers()">Cek</button>
 
@@ -154,6 +160,7 @@
             "Soekarno", "Soekarno", "Soekarno", "Soekarno", "Soekarno"
         ]; // Contoh jawaban yang benar untuk setiap input
         
+        // Check answers for inputs 1 to 25
         for (let i = 1; i <= 25; i++) {
             const userAnswer = document.getElementById(`userAnswer${i}`).value;
             const resultDiv = document.getElementById(`result${i}`);
@@ -163,6 +170,17 @@
             } else {
                 resultDiv.innerHTML = "<span class='incorrect'>❌</span>"; 
             }
+        }
+
+        // Check answer for Jumlah
+        const jumlahCorrectAnswer = "25"; // Contoh jawaban benar untuk Jumlah
+        const userJumlah = document.getElementById("jumlah").value;
+        const resultJumlahDiv = document.getElementById("resultJumlah");
+
+        if (userJumlah.trim() === jumlahCorrectAnswer) {
+            resultJumlahDiv.innerHTML = "<span class='correct'>✔️</span>"; 
+        } else {
+            resultJumlahDiv.innerHTML = "<span class='incorrect'>❌</span>"; 
         }
     }
 </script>
