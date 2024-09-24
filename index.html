@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengecekan Jawaban Kuis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cek Jawaban Kuis</h1>
+        <form id="quizForm">
+            <label for="question1">1. Apakah bumi itu datar?</label><br>
+            <input type="radio" name="question1" value="true"> Benar<br>
+            <input type="radio" name="question1" value="false"> Salah<br><br>
+
+            <label for="question2">2. Apakah air itu H2O?</label><br>
+            <input type="radio" name="question2" value="true"> Benar<br>
+            <input type="radio" name="question2" value="false"> Salah<br><br>
+
+            <button type="submit">Cek Jawaban</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
