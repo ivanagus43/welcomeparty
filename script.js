@@ -10,7 +10,7 @@ document.querySelector('#checkAnswers').addEventListener('click', () => {
     // Reset hasil sebelumnya
     const results = document.querySelectorAll('.result');
     results.forEach(result => {
-        result.textContent = ''; // Menghapus tanda centang/silang sebelumnya
+        result.textContent = ''; // Menghapus hasil sebelumnya
     });
 
     document.querySelectorAll('.answer').forEach((input, index) => {
@@ -20,12 +20,11 @@ document.querySelector('#checkAnswers').addEventListener('click', () => {
         const correctAnswer = correctAnswers[rowIndex][colIndex];
 
         // Menentukan hasil berdasarkan jawaban
-        const resultCell = document.querySelector(`tr:nth-child(${Math.floor(index / 5) + 2}) .result`);
-        
+        const resultCell = input.nextElementSibling; // Mendapatkan elemen div di samping input
         if (userAnswer === correctAnswer) {
-            resultCell.textContent += '✔️ '; // Tanda centang jika benar
+            resultCell.textContent = 'Benar'; // Menampilkan "Benar" jika jawaban benar
         } else if (userAnswer !== '') {
-            resultCell.textContent += '❌ '; // Tanda silang jika salah
+            resultCell.textContent = 'Salah'; // Menampilkan "Salah" jika jawaban salah
         }
     });
 });
