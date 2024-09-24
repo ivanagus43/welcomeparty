@@ -14,13 +14,13 @@ th, td {
     font-size: 12px; /* Ukuran font untuk hasil */
     margin-top: 2px; /* Spasi antara input dan hasil */
 }
-input.answer {
+textarea.answer {
     width: 100%; /* Mengisi penuh kolom */
     height: 100%; /* Mengisi penuh kolom */
-    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi ukuran */
-    font-size: 12px; /* Ukuran font untuk input */
+    font-size: 16px; /* Ukuran font untuk textarea */
     padding: 0; /* Menghapus padding untuk ukuran yang tepat */
     margin: 0; /* Menghapus margin untuk ukuran yang tepat */
+    resize: none; /* Menghapus kemampuan resize */
 }
 button {
     margin-top: 20px;
