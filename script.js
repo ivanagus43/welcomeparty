@@ -6,21 +6,27 @@ const correctAnswers = [
     ['A', 'B', 'C', 'D', 'E'],  // Baris 5
 ];
 
-document.querySelectorAll('.answer').forEach((input, index) => {
-    input.addEventListener('input', function() {
+document.querySelector('#checkAnswers').addEventListener('click', () => {
+    document.querySelectorAll('.answer').forEach((input, index) => {
         const rowIndex = Math.floor(index / 5); // 5 kolom
         const colIndex = index % 5;
-        const userAnswer = this.value.trim().toUpperCase();
+        const userAnswer = input.value.trim().toUpperCase();
         const correctAnswer = correctAnswers[rowIndex][colIndex];
 
+        // Hapus kelas sebelumnya
+        const columnCells = document.querySelectorAll(`tr td:nth-child(${colIndex + 1})`);
+        columnCells.forEach(cell => {
+            cell.classList.remove('column-correct', 'column-incorrect');
+        });
+
         if (userAnswer === correctAnswer) {
-            this.classList.add('correct');
-            this.classList.remove('incorrect');
+            columnCells.forEach(cell => {
+                cell.classList.add('column-correct');
+            });
         } else if (userAnswer !== '') {
-            this.classList.add('incorrect');
-            this.classList.remove('correct');
-        } else {
-            this.classList.remove('correct', 'incorrect'); // Reset jika input kosong
+            columnCells.forEach(cell => {
+                cell.classList.add('column-incorrect');
+            });
         }
     });
 });
