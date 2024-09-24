@@ -14,7 +14,7 @@ th, td {
     font-size: 12px; /* Ukuran font untuk hasil */
     margin-top: 2px; /* Spasi antara input dan hasil */
 }
-textarea.answer {
+textarea {
     width: 20px; /* Mengatur lebar textarea */
     height: 20px; /* Mengatur tinggi textarea */
     font-size: 8px; /* Ukuran font untuk textarea */
