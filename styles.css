@@ -5,8 +5,8 @@ table {
 th, td {
     border: 1px solid #000;
     padding: 0; /* Menghapus padding untuk mendekatkan ukuran */
-    width: 100px; /* Set lebar kolom */
-    height: 100px; /* Set tinggi kolom */
+    width: 1000px; /* Set lebar kolom */
+    height: 1000px; /* Set tinggi kolom */
     text-align: center;
 }
 .result {
