@@ -21,6 +21,7 @@ textarea.answer {
     padding: 0; /* Menghapus padding untuk ukuran yang tepat */
     margin: 0; /* Menghapus margin untuk ukuran yang tepat */
     resize: none; /* Menghapus kemampuan resize */
+    box-sizing: border-box; /* Memastikan ukuran tetap konsisten */
 }
 button {
     margin-top: 20px;
