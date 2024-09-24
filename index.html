@@ -7,14 +7,20 @@
     <style>
         body { font-family: Arial, sans-serif; }
         .input-container {
-            display: flex; /* Mengatur input agar berjejer ke samping */
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 kolom */
             gap: 10px; /* Jarak antar input */
             margin-bottom: 20px; /* Jarak antara baris input */
         }
         input[type="text"] {
-            width: 100px; /* Atur lebar input */
+            width: 100%; /* Lebar input 100% dari kolom */
             padding: 10px;
             font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
         .result { margin-top: 5px; }
         .correct { color: green; }
@@ -25,41 +31,151 @@
 
 <h1>Masukkan Jawaban Anda</h1>
 <div class="input-container">
+    <!-- Loop untuk 25 input -->
     <div>
+        <label for="userAnswer1">Jawaban 1:</label>
         <input type="text" id="userAnswer1" placeholder="Jawaban 1">
         <div class="result" id="result1"></div>
     </div>
     <div>
+        <label for="userAnswer2">Jawaban 2:</label>
         <input type="text" id="userAnswer2" placeholder="Jawaban 2">
         <div class="result" id="result2"></div>
     </div>
     <div>
+        <label for="userAnswer3">Jawaban 3:</label>
         <input type="text" id="userAnswer3" placeholder="Jawaban 3">
         <div class="result" id="result3"></div>
     </div>
     <div>
+        <label for="userAnswer4">Jawaban 4:</label>
         <input type="text" id="userAnswer4" placeholder="Jawaban 4">
         <div class="result" id="result4"></div>
     </div>
     <div>
+        <label for="userAnswer5">Jawaban 5:</label>
         <input type="text" id="userAnswer5" placeholder="Jawaban 5">
         <div class="result" id="result5"></div>
+    </div>
+    
+    <div>
+        <label for="userAnswer6">Jawaban 6:</label>
+        <input type="text" id="userAnswer6" placeholder="Jawaban 6">
+        <div class="result" id="result6"></div>
+    </div>
+    <div>
+        <label for="userAnswer7">Jawaban 7:</label>
+        <input type="text" id="userAnswer7" placeholder="Jawaban 7">
+        <div class="result" id="result7"></div>
+    </div>
+    <div>
+        <label for="userAnswer8">Jawaban 8:</label>
+        <input type="text" id="userAnswer8" placeholder="Jawaban 8">
+        <div class="result" id="result8"></div>
+    </div>
+    <div>
+        <label for="userAnswer9">Jawaban 9:</label>
+        <input type="text" id="userAnswer9" placeholder="Jawaban 9">
+        <div class="result" id="result9"></div>
+    </div>
+    <div>
+        <label for="userAnswer10">Jawaban 10:</label>
+        <input type="text" id="userAnswer10" placeholder="Jawaban 10">
+        <div class="result" id="result10"></div>
+    </div>
+
+    <div>
+        <label for="userAnswer11">Jawaban 11:</label>
+        <input type="text" id="userAnswer11" placeholder="Jawaban 11">
+        <div class="result" id="result11"></div>
+    </div>
+    <div>
+        <label for="userAnswer12">Jawaban 12:</label>
+        <input type="text" id="userAnswer12" placeholder="Jawaban 12">
+        <div class="result" id="result12"></div>
+    </div>
+    <div>
+        <label for="userAnswer13">Jawaban 13:</label>
+        <input type="text" id="userAnswer13" placeholder="Jawaban 13">
+        <div class="result" id="result13"></div>
+    </div>
+    <div>
+        <label for="userAnswer14">Jawaban 14:</label>
+        <input type="text" id="userAnswer14" placeholder="Jawaban 14">
+        <div class="result" id="result14"></div>
+    </div>
+    <div>
+        <label for="userAnswer15">Jawaban 15:</label>
+        <input type="text" id="userAnswer15" placeholder="Jawaban 15">
+        <div class="result" id="result15"></div>
+    </div>
+
+    <div>
+        <label for="userAnswer16">Jawaban 16:</label>
+        <input type="text" id="userAnswer16" placeholder="Jawaban 16">
+        <div class="result" id="result16"></div>
+    </div>
+    <div>
+        <label for="userAnswer17">Jawaban 17:</label>
+        <input type="text" id="userAnswer17" placeholder="Jawaban 17">
+        <div class="result" id="result17"></div>
+    </div>
+    <div>
+        <label for="userAnswer18">Jawaban 18:</label>
+        <input type="text" id="userAnswer18" placeholder="Jawaban 18">
+        <div class="result" id="result18"></div>
+    </div>
+    <div>
+        <label for="userAnswer19">Jawaban 19:</label>
+        <input type="text" id="userAnswer19" placeholder="Jawaban 19">
+        <div class="result" id="result19"></div>
+    </div>
+    <div>
+        <label for="userAnswer20">Jawaban 20:</label>
+        <input type="text" id="userAnswer20" placeholder="Jawaban 20">
+        <div class="result" id="result20"></div>
+    </div>
+
+    <div>
+        <label for="userAnswer21">Jawaban 21:</label>
+        <input type="text" id="userAnswer21" placeholder="Jawaban 21">
+        <div class="result" id="result21"></div>
+    </div>
+    <div>
+        <label for="userAnswer22">Jawaban 22:</label>
+        <input type="text" id="userAnswer22" placeholder="Jawaban 22">
+        <div class="result" id="result22"></div>
+    </div>
+    <div>
+        <label for="userAnswer23">Jawaban 23:</label>
+        <input type="text" id="userAnswer23" placeholder="Jawaban 23">
+        <div class="result" id="result23"></div>
+    </div>
+    <div>
+        <label for="userAnswer24">Jawaban 24:</label>
+        <input type="text" id="userAnswer24" placeholder="Jawaban 24">
+        <div class="result" id="result24"></div>
+    </div>
+    <div>
+        <label for="userAnswer25">Jawaban 25:</label>
+        <input type="text" id="userAnswer25" placeholder="Jawaban 25">
+        <div class="result" id="result25"></div>
     </div>
 </div>
 <button onclick="checkAnswers()">Kirim</button>
 
 <script>
     function checkAnswers() {
-        const correctAnswers = ["Soekarno", "Soekarno", "Soekarno", "Soekarno", "Soekarno"];
+        const correctAnswers = Array(25).fill("Soekarno"); // Contoh jawaban yang benar
         
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 25; i++) {
             const userAnswer = document.getElementById(`userAnswer${i}`).value;
             const resultDiv = document.getElementById(`result${i}`);
             
             if (userAnswer.trim().toLowerCase() === correctAnswers[i - 1].toLowerCase()) {
-                resultDiv.innerHTML = "<span class='correct'>✔️</span>"; // Centang hijau
+                resultDiv.innerHTML = "<span class='correct'>✔️</span>"; 
             } else {
-                resultDiv.innerHTML = "<span class='incorrect'>❌</span>"; // Silang merah
+                resultDiv.innerHTML = "<span class='incorrect'>❌</span>"; 
             }
         }
     }
