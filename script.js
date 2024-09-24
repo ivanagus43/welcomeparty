@@ -1,14 +1,15 @@
-document.querySelectorAll('.answer').forEach(input => {
-    input.addEventListener('input', function() {
-        const userAnswer = this.value.trim().toUpperCase();
-        const correctAnswer = this.dataset.correct;
-
-        if (userAnswer === correctAnswer) {
-            this.classList.add('correct');
-            this.classList.remove('incorrect');
-        } else {
-            this.classList.add('incorrect');
-            this.classList.remove('correct');
-        }
-    });
-});
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+.correct {
+    background-color: lightgreen;
+}
+.incorrect {
+    background-color: lightcoral;
+}
