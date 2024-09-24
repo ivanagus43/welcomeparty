@@ -6,13 +6,17 @@
     <title>Quiz Sederhana</title>
     <style>
         body { font-family: Arial, sans-serif; }
+        input[type="text"] {
+            width: 300px; /* Atur lebar input di sini */
+            padding: 10px;
+            font-size: 16px;
+        }
         .result { margin-top: 20px; }
     </style>
 </head>
 <body>
 
-<h1>Quiz Sederhana</h1>
-<p>Siapa presiden pertama Indonesia?</p>
+<h1>Masukkan Jawaban Anda</h1>
 <input type="text" id="userAnswer" placeholder="Masukkan jawaban Anda">
 <button onclick="checkAnswer()">Kirim</button>
 
