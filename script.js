@@ -21,6 +21,7 @@ document.querySelector('#checkAnswers').addEventListener('click', () => {
 
         // Menentukan warna kolom berdasarkan jawaban
         const columnCells = document.querySelectorAll(`tr td:nth-child(${colIndex + 1})`);
+        
         if (userAnswer === correctAnswer) {
             columnCells.forEach(cell => {
                 cell.classList.add('column-correct');
