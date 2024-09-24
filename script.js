@@ -7,13 +7,7 @@ document.getElementById("checkAnswers").addEventListener("click", function() {
     const textareas = document.querySelectorAll("textarea.answer");
     const results = document.querySelectorAll(".result");
 
-    // Reset hasil sebelumnya
-    results.forEach(resultDiv => {
-        resultDiv.textContent = ""; // Hapus teks hasil
-        resultDiv.className = ""; // Hapus kelas
-    });
-
-    // Cek jawaban baru
+    // Cek jawaban baru tanpa menghapus nilai textarea
     textareas.forEach((textarea, index) => {
         const userAnswer = textarea.value.trim();
         const resultDiv = results[index];
