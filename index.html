@@ -3,47 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabel Input Jawaban</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz Sederhana</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .result { margin-top: 20px; }
+    </style>
 </head>
 <body>
 
-<h2>Tabel Input Jawaban</h2>
-<table id="answerTable">
-    <tr>
-        <th>Kolom 1</th>
-        <th>Kolom 2</th>
-        <th>Kolom 3</th>
-        <th>Kolom 4</th>
-        <th>Kolom 5</th>
-    </tr>
-    <tr>
-        <td>
-            <textarea class="answer" rows="1" cols="2" maxlength="1" spellcheck="false" style="resize: none; font-size: 16px;"></textarea>
-            <div class="result"></div>
-        </td>
-        <td>
-            <textarea class="answer" rows="1" cols="2" maxlength="1" spellcheck="false" style="resize: none; font-size: 16px;"></textarea>
-            <div class="result"></div>
-        </td>
-        <td>
-            <textarea class="answer" rows="1" cols="2" maxlength="1" spellcheck="false" style="resize: none; font-size: 16px;"></textarea>
-            <div class="result"></div>
-        </td>
-        <td>
-            <textarea class="answer" rows="1" cols="2" maxlength="1" spellcheck="false" style="resize: none; font-size: 16px;"></textarea>
-            <div class="result"></div>
-        </td>
-        <td>
-            <textarea class="answer" rows="1" cols="2" maxlength="1" spellcheck="false" style="resize: none; font-size: 16px;"></textarea>
-            <div class="result"></div>
-        </td>
-    </tr>
-</table>
+<h1>Quiz Sederhana</h1>
+<p>Siapa presiden pertama Indonesia?</p>
+<input type="text" id="userAnswer" placeholder="Masukkan jawaban Anda">
+<button onclick="checkAnswer()">Kirim</button>
 
-<button id="checkAnswers">Cek Jawaban</button>
+<div class="result" id="result"></div>
 
-<script src="script.js"></script>
+<script>
+    function checkAnswer() {
+        const correctAnswer = "Soekarno";
+        const userAnswer = document.getElementById("userAnswer").value;
+
+        const resultDiv = document.getElementById("result");
+        if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+            resultDiv.innerHTML = "<p style='color: green;'>Jawaban Benar!</p>";
+        } else {
+            resultDiv.innerHTML = "<p style='color: red;'>Jawaban Salah. Coba lagi!</p>";
+        }
+    }
+</script>
 
 </body>
 </html>
