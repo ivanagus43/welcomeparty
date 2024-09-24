@@ -14,18 +14,17 @@ th, td {
     font-size: 12px; /* Ukuran font untuk hasil */
     margin-top: 2px; /* Spasi antara input dan hasil */
 }
-textarea {
-    width: 20px; /* Mengatur lebar textarea */
-    height: 20px; /* Mengatur tinggi textarea */
-    font-size: 8px; /* Ukuran font untuk textarea */
-    padding: 0; /* Menghapus padding untuk ukuran yang tepat */
-    margin: 0; /* Menghapus margin untuk ukuran yang tepat */
-    resize: none; /* Menghapus kemampuan resize */
-    box-sizing: border-box; /* Memastikan ukuran tetap konsisten */
-}
 button {
     margin-top: 20px;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
+}
+.correct {
+    color: green; /* Warna hijau untuk centang */
+    font-weight: bold; /* Membuat lebih menonjol */
+}
+.wrong {
+    color: red; /* Warna merah untuk silang */
+    font-weight: bold; /* Membuat lebih menonjol */
 }
