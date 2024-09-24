@@ -16,6 +16,8 @@
             font-size: 16px;
         }
         .result { margin-top: 5px; }
+        .correct { color: green; }
+        .incorrect { color: red; }
     </style>
 </head>
 <body>
@@ -54,9 +56,9 @@
             const resultDiv = document.getElementById(`result${i}`);
             
             if (userAnswer.trim().toLowerCase() === correctAnswers[i - 1].toLowerCase()) {
-                resultDiv.innerHTML = "<p style='color: green;'>Jawaban Benar!</p>";
+                resultDiv.innerHTML = "<span class='correct'>✔️</span>"; // Centang hijau
             } else {
-                resultDiv.innerHTML = "<p style='color: red;'>Jawaban Salah. Coba lagi!</p>";
+                resultDiv.innerHTML = "<span class='incorrect'>❌</span>"; // Silang merah
             }
         }
     }
